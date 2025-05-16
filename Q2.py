@@ -1,4 +1,6 @@
-from Q1 import A,B
+from Q1 import sorted_A,sorted_B, print_array_pretty
+A = sorted_A
+B = sorted_B
 
 def mergesort(A, B):
     i = 0 #for A
@@ -6,7 +8,7 @@ def mergesort(A, B):
     C = []
     while i < len(A) and j < len(B):
         if A[i] < B[j]:
-            C.append(A[i]) #append stores a single value in arr at the end of list]
+            C.append(A[i]) #append stores a single value in arr at the end of list
             i += 1
         else:
             C.append(B[j])
@@ -16,6 +18,6 @@ def mergesort(A, B):
     return C
 
 C = mergesort(A, B)
-print(f"Merged array C: {C}")
+print_array_pretty(C, name="Merged array C")
 assert len(C) == len(A) + len(B), "Merged array size is incorrect"
 assert C == sorted(C), "Merged array is not sorted"

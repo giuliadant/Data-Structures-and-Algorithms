@@ -1,6 +1,6 @@
 import random
 
-numbers = [random.randint(0,100) for _ in range (50)]
+numbers = [random.randint(0,100) for _ in range (40)]
 
 def find_max_recursive(lst):
     if len(lst) == 1:

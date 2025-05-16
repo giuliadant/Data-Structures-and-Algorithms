@@ -1,6 +1,6 @@
 import random
 
-array = [random.randint(0,100) for _ in range (50)]
+array = [random.randint(0,100) for _ in range (40)]
 
 def find_duplicates(arr):
     counts = {}
@@ -16,10 +16,11 @@ def find_duplicates(arr):
 
 repeats = find_duplicates(array)
 
+print(f"Array: {array}")
+print("Repeated integers:", repeats)
+
 if all(array.count(x) > 1 for x in repeats):
-    print(" Function passed for this array")
+    print("Function successful for this array")
 else:
     print("Function failed for this array")
 
-print(f"Array: {array}")
-print("Repeated integers:", repeats)
